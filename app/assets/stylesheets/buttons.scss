@@ -1,0 +1,23 @@
+@import './variables';
+
+.btn-primary{
+  position: absolute;
+  width: 362px;
+  height: 40px;
+  left: 30px;
+  top: 889px;
+  
+  background: #F8BD1C;
+  border-radius: 4px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.btn-secondary {
+    background-color: white;
+    border: solid 1px $primary-color;
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    font-weight: bold;
+  }
