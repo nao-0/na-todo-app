@@ -1,0 +1,29 @@
+input, select{
+  &.text {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 10px 24px;
+    border: 0px solid #EBEBEB;
+    background: #F4F4F4;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+label {
+  font-size: 12px;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+}
+
+textarea {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px 8px;
+  min-height: 440px;
+  resize: vertical;
+  border: 1px solid #EBEBEB;
+  
+}

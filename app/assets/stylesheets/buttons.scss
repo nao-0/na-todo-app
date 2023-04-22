@@ -1,0 +1,22 @@
+@import './variables';
+
+.btn-primary{
+  background-color: #F8BD1C;
+  position: bottom;
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.btn-secondary {
+    background-color: white;
+    border: solid 1px $primary-color;
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    font-weight: bold;
+  }
