@@ -1,18 +1,20 @@
 @import 'variables';
 
 $avatar-size: 40px;
-$header-padding-y: 16px;
+$header-padding-y: 10px;
 $back_icon_size: 16px;
 
 .header {
   display: flex;
   justify-content: space-between;
   background-color: $primary-color;
-  padding: $header-padding-y 16px;
-  font-weight: bold;
+  padding: $header-padding-y 30px;
+  border-bottom: 1px solid #F4F4F4;
+  font-family: 'Avenir';
 
   a {
-    color: white;
+    color: #000000;
+    
   }
 
   &_loginBtn {
