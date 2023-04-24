@@ -7,7 +7,7 @@ class BoardsController < ApplicationController
       end
   
       def show
-          @comments = @board.comments
+          
       end
   
       def new
@@ -49,7 +49,7 @@ class BoardsController < ApplicationController
       end
   
       private
-      def aboard_params
+      def board_params
           params.require(:board).permit(:title, :content, :eyecatch)
       end
   end
