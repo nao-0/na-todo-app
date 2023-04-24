@@ -1,7 +1,6 @@
 .container
-  = render 'tabs'
-  - @articles.each do |article|
-    = render 'commons/article', article: article
-  = link_to new_article_path do
-    .float_btn
-      %i.fa.fa-plus
+  - @boards.each do |board|
+    = render 'commons/board', board: board
+  = link_to new_board_path do
+    .card_newboard 
+      + Add new Board

@@ -1,0 +1,16 @@
+.container
+  %ul
+    - board.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: board, local: true) do |f|
+    %div
+      = f.file_field :eyecatch
+    %div
+      = f.label :title, 'name'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :content, 'Description'
+    %div
+      = f.text_area  :content
+    = f.submit '保存', class: 'btn-primary'
