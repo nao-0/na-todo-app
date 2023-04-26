@@ -5,28 +5,9 @@ $container-padding: 16px;
 
 .board {
   background-color: white;
-  margin: 16px 16px;
   padding: $container-padding $container-padding;
-  height: 161px;
   background: #F4F4F4;
   border-radius: 10px;
-
-  &_image {
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-    margin: $container-padding * -1 $container-padding * -1 16px;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100%;
-    }
-  }
 
 
   h2 {
@@ -63,17 +44,25 @@ $container-padding: 16px;
   }
 
   &_content {
-    padding: 24px 0 32px;
-  }
+    left: 0%;
+    right: 0%;
 
-  &_heart {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
+    padding: 8px 0;
+
+    
 
     img {
-      width: $heart-size;
-      height: $heart-size;
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
     }
+
+    &_texts {
+      opacity: 0.4;
+    }
+
   }
+
 }
