@@ -1,0 +1,68 @@
+$heart-size: 32px;
+$avatar-size: 32px;
+$container-padding: 16px;
+
+
+.board {
+  background-color: white;
+  padding: $container-padding $container-padding;
+  background: #F4F4F4;
+  border-radius: 10px;
+
+
+  h2 {
+    font-size: 16px;
+  }
+
+  &_title {
+    font-size: 18px;
+  }
+
+  &_comment {
+    padding: 8px 0;
+  }
+
+  &_detail {
+    padding-top: 10px;
+    
+    display: flex;
+    font-size: 12px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
+    }
+
+    &_actions {
+      right: 0px;
+      position: absolute;
+    }
+  }
+
+  &_content {
+    left: 0%;
+    right: 0%;
+
+    padding: 8px 0;
+
+    
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
+    }
+
+    &_texts {
+      opacity: 0.4;
+    }
+
+  }
+
+}
