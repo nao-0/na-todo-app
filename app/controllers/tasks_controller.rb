@@ -8,7 +8,11 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
 
   def new
     @board = Board.find(params[:board_id])
-    @task = current_user.boards.find(params[:board_id]).tasks.build
+    if current_user
+      @task = current_user.boards.find(params[:board_id]).tasks.build
+    else
+      redirect_to new_user_session_path, notice: 'ログインしてください'
+    end
   end
 
   def create
@@ -21,7 +25,6 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
       render :new
     end
   end
-
 
   def edit
     board = board.find(params[:board_id])
