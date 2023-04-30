@@ -1,0 +1,19 @@
+.container
+  %h2 New Card
+  %ul
+    - task.errors.full_messages.each do |message|
+      %li= message
+  = form_with model: task, url: board_tasks_path(@board), local: true do |f|
+    %div
+      = f.label :eyecatch, 'eyecatch'
+    %div
+      = f.file_field :eyecatch
+    %div
+      = f.label :title, 'Name'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :content, 'Description'
+    %div
+      = f.text_area  :content
+    = f.submit 'Submit', class: 'btn-primary'

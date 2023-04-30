@@ -3,7 +3,7 @@ $avatar-size: 32px;
 $container-padding: 16px;
 
 
-.board {
+.task {
   background-color: white;
   padding: $container-padding $container-padding;
   margin: 16px 0px;
@@ -13,7 +13,6 @@ $container-padding: 16px;
 
   h2 {
     font-size: 16px;
-    
   }
 
   &_title {
