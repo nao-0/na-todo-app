@@ -1,7 +1,7 @@
 .container
   %h2 Brackets
   - @tasks.each do |task|
-    = render 'commons/task', task: task
+    = render 'commons/task', task: task ,board: @board
   = link_to new_board_task_path(board_id: @board.id) do
     .card_newboard  
       + Add new task
