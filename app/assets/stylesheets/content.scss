@@ -1,0 +1,85 @@
+$heart-size: 32px;
+$avatar-size: 32px;
+$container-padding: 16px;
+
+.content {
+  background-color: white;
+  margin: 0px 16px;
+  padding: $container-padding $container-padding;
+  position: relative;
+  border-radius: 10px;
+
+  &_image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
+
+  h2 {
+    font-size: 16px;
+  }
+
+  &_title {
+    font-size: 22px;
+    overflow: hidden;
+  }
+
+  &_comment {
+    padding: 8px 0;
+  }
+
+  &_detail {
+    padding-top: 10px;
+    
+    display: flex;
+    font-size: 12px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      margin-right: 16px;
+      border-radius: 10px;
+    }
+
+    &_actions {
+      right: 0px;
+      position: absolute;
+    }
+  }
+
+  &_text {
+    background: #F4F4F4;
+    border-radius: 10px;
+    padding: $container-padding $container-padding;
+    font-size: 14px;
+
+  }
+
+  &_heart {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+    img {
+      width: $heart-size;
+      height: $heart-size;
+    }
+  }
+
+
+}

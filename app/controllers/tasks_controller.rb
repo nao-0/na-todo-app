@@ -34,15 +34,16 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @board = board.find(params[:board_id])
-    @task = current_user.boards.find(params[:id]).tasksfind(params[:id])
+    @board = current_user.boards.find(params[:board_id])
+    @task = @board.tasks.find(params[:id])
   end
 
   def update
-    @board = board.find(params[:board_id])
-    @task = current_user.boards.find(params[:id]).tasksfind(params[:id])
-    if @board.update(board_params)
-      redirect_to board_path(@board), notice: '更新できました'
+    @board = Board.find(params[:board_id])
+    @task = current_user.boards.find(params[:board_id]).tasks.find(params[:id])
+    @task.user_id = current_user.id
+    if @task.update(task_params)
+      redirect_to board_task_path(board_id: @board.id, id: @task.id), notice: '更新できました'
     else
       flash.now[:error] = '更新できませんでした'
       render :edit
@@ -50,9 +51,9 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @board = board.find(params[:board_id])
-    task = current_user.boards.find(params[:id]).tasksfind(params[:id])
-    task.destroy!
+    @board = current_user.boards.find(params[:board_id])
+    @task = @board.tasks.find(params[:id])
+    @task.destroy!
     redirect_to root_path, notice: '削除に成功しました'
   end
 
