@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_many :tasks, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_one :profile, dependent: :destroy
        
   delegate :birthday, :age, :gender, to: :profile, allow_nil: true

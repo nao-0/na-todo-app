@@ -8,8 +8,10 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
-    @board = @task.board
+    @board = Board.find(params[:board_id])
+    @task = @board.tasks.find(params[:id])
+    @comments = @task.comments.includes(:user)
+
   end
 
   def new
