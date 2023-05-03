@@ -39,8 +39,9 @@ class TasksController < ApplicationController
   end
 
   def update
-    @board = current_user.boards.find(params[:board_id])
-    @task = @board.tasks.find(params[:id])
+    @board = Board.find(params[:board_id])
+    @task = current_user.boards.find(params[:board_id]).tasks.find(params[:id])
+    @task.user_id = current_user.id
     if @task.update(task_params)
       redirect_to board_task_path(board_id: @board.id, id: @task.id), notice: '更新できました'
     else
