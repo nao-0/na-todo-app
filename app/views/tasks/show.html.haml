@@ -1,19 +1,26 @@
-.task
-  .task_detail
-    %h1.task_title= @task.title
-    - if user_signed_in? && current_user.has_written?(@task)
-      .task_detail_actions
+.content 
+  .content_detail
+    %h1.content_title= @task.title
+    - if user_signed_in? && current_user.has_written_?(@task)
+      .content_detail_actions
         .dropdown
           = image_tag 'actions.svg', class: 'dropbtn'
           .dropdown-content.mini
-            = link_to '編集する', edit_board_task_path(@task)
-            = link_to '削除する', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
-  
+            = link_to '編集する', edit_board_task_path(@board,@task)
+            = link_to '削除する', board_task_path(@board,@task), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
+.content
   - if @task.eyecatch.attached?
-    .task_image 
+    .content_image 
       = image_tag @task.eyecatch
+
+.content 
+  .content_text
+    = @task.content
+
+
+
   
-  
+
 
 
 
