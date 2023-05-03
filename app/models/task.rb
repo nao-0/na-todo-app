@@ -10,6 +10,8 @@ class Task < ApplicationRecord
     I18n.l(self.created_at, format: :default)
   end
 
-
+  def auther_name
+    user.display_name
+  end
 
 end
