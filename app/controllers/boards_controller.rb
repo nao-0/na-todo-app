@@ -7,7 +7,15 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @tasks = @board.tasks
+    @board = Board.find(params[:id])
+    @tasks = @board.tasks.includes(:comments)
+
+    @comment_count = Hash.new(0)
+    @tasks.each do |task|
+      task.comments.each do |_comment|
+        @comment_count[task.id] += 1
+      end
+    end
   end
 
   def new
