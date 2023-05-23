@@ -1,0 +1,23 @@
+$heart-size: 32px;
+$avatar-size: 32px;
+$container-padding: 16px;
+
+.comment {
+
+  &_detail {
+    padding-top: 10px;
+    
+    display: flex;
+    font-size: 12px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
+    }
+  }
+
+}

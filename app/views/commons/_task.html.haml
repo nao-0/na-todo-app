@@ -3,9 +3,12 @@
     -if task.eyecatch.attached?
       .card_image
         = image_tag task.eyecatch
-    .task_detail
-      %h1.task_title= task.title
     .task_content
+      %h1.task_title= task.title
       .task_content_texts 
         %p.task_content= task.content
+    .task_detail
       = image_tag task.user.avatar_image
+      .task_detail_comment
+        %p= @comment_count[task.id]
+        %i.fa.fa-comments-o

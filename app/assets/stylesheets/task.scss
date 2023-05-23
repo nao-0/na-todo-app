@@ -43,9 +43,8 @@ $container-padding: 16px;
 
   &_detail {
     padding-top: 10px;
-    
+    justify-content: space-between;
     display: flex;
-    font-size: 12px;
     position: relative;
 
     img {
@@ -57,9 +56,11 @@ $container-padding: 16px;
       
     }
 
-    &_actions {
-      right: 0px;
-      position: absolute;
+    &_comment {
+      opacity: 0.2;
+      display: flex;
+      position: relative;
+      font-size: 20px;
     }
   }
 

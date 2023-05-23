@@ -17,6 +17,19 @@
   .content_text
     = @task.content
 
+.content 
+  %h2 comments
+  - @comments.each do |comment|
+    .content_comment 
+      .comment_detail
+        = image_tag comment.user.avatar_image
+        %div
+          %p= comment.content
+
+  = link_to new_board_task_comment_path(board_id: @board.id, task_id: @task.id) do
+    .card_newcomment 
+      コメントを追加
+
 
 
   
